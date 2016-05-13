@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 
 // Facebook Webhook
 app.get('/webhook/', function (req, res) {
-  if (req.query['hub.verify_token'] === '<validation_token>') {
+  if (req.query['hub.verify_token'] === 'EAAD0BqWxcq8BAEElFZAcvMSKY0wGCCaXNQZBSd5u63KHJpQXV8EvZCF4pVG1ypJmGlCWe4hH5u6kZCHyYb5QSl4UcI3W1jfrrtKHP5SGHKzcEhS09QDboenP4uRl7WdvD2TN0JsK0Tx97CuiIObrAvB2GkvNcDUZBIOja6VNzkwZDZD') {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
